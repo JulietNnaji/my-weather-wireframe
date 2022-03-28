@@ -116,9 +116,7 @@ function showFahrenheitTemperature(event) {
   let temperature = document.querySelector("#temperature");
   celsius.classList.remove("active");
   fahrenheit.classList.add("active");
-  let fahrenheitTemperature = document.querySelector(
-    celsiusTemperature * 1.8 + 32
-  );
+  let fahrenheitTemperature = celsiusTemperature * 1.8 + 32;
   temperature.innerHTML = Math.round(fahrenheitTemperature);
 }
 
@@ -127,7 +125,6 @@ function showCelsiusTemperature(event) {
   celsius.classList.add("active");
   fahrenheit.classList.remove("active");
   let temperature = document.querySelector("#temperature");
-  temperature.innerHTML = Math.round(fahrenheitTemperature);
   temperature.innerHTML = Math.round(celsiusTemperature);
 }
 
@@ -142,4 +139,4 @@ fahrenheit.addEventListener("click", showFahrenheitTemperature);
 let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", showCelsiusTemperature);
 
-search("Lagos");
+searchButton("Lagos");
