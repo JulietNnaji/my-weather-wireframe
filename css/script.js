@@ -109,6 +109,13 @@ function submitButton(event) {
   event.preventDefault();
   let searchCityButton = document.querySelector("#search-city-button");
   searchButton(searchCityButton.value);
+  let h1 = document.querySelector("h1");
+  if (searchCityButton.value) {
+    h1.innerHTML = `${searchCityButton.value}`;
+  } else {
+    h1.innerHTML = null;
+    alert(`Please type a city`);
+  }
 }
 
 function showFahrenheitTemperature(event) {
